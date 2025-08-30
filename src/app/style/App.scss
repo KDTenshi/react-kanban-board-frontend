@@ -10,4 +10,11 @@
   width: 100vw;
   height: 100vh;
   background: c.$WHITE;
+  display: flex;
+  flex-direction: column;
+}
+
+.Body {
+  width: 100vw;
+  height: 100%;
 }
