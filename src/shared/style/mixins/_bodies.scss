@@ -1,0 +1,25 @@
+// BASE MIXINS
+
+@mixin _BODY_BASE($fontSize, $fontWeight) {
+  font-family: "Mulish", sans-serif;
+  font-size: $fontSize;
+  font-weight: $fontWeight;
+}
+
+// BODIES MIXINS
+
+@mixin BODY_1() {
+  @include _BODY_BASE(20px, 400);
+}
+
+@mixin BODY_2() {
+  @include _BODY_BASE(16px, 400);
+}
+
+@mixin BODY_3() {
+  @include _BODY_BASE(14px, 300);
+}
+
+@mixin BODY_4() {
+  @include _BODY_BASE(12px, 300);
+}
