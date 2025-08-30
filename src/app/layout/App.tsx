@@ -4,6 +4,7 @@ import "../style/App.scss";
 
 import { Header } from "../../features/ui/components/Header";
 import { Sidebar } from "../../features/ui/components/Sidebar";
+import { HomePage } from "../../pages/HomePage";
 
 const App: FC = () => {
   return (
@@ -11,6 +12,7 @@ const App: FC = () => {
       <Header />
       <div className="Body">
         <Sidebar />
+        <HomePage />
       </div>
     </div>
   );
