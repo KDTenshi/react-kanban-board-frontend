@@ -4,7 +4,8 @@ import "../style/App.scss";
 
 import { Header } from "../../features/ui/components/Header";
 import { Sidebar } from "../../features/ui/components/Sidebar";
-import { HomePage } from "../../pages/HomePage";
+// import { HomePage } from "../../pages/HomePage";
+import { BoardsPage } from "../../pages/BoardsPage";
 
 const App: FC = () => {
   return (
@@ -12,7 +13,8 @@ const App: FC = () => {
       <Header />
       <div className="Body">
         <Sidebar />
-        <HomePage />
+        {/* <HomePage /> */}
+        <BoardsPage />
       </div>
     </div>
   );

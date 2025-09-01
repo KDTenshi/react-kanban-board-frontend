@@ -1,0 +1,113 @@
+@use "shared/style/colors" as c;
+@use "shared/style/mixins" as *;
+
+.Page {
+  width: 100%;
+  padding: 50px 75px;
+  display: flex;
+  flex-direction: column;
+  gap: 50px;
+}
+
+.Title {
+  @include HEADING_2();
+
+  color: c.$GRAY_DARK;
+}
+
+.Boards {
+  padding: 25px 50px;
+  background: c.$GRAY_LIGHT;
+  border: 1px solid c.$GRAY;
+  border-radius: 25px;
+  display: flex;
+  flex-direction: column;
+  gap: 25px;
+}
+
+.Button {
+  @include BODY_1();
+
+  padding: 10px 15px;
+  border-radius: 10px;
+  color: c.$GRAY_DARK;
+  width: max-content;
+  display: flex;
+  align-items: center;
+  justify-content: start;
+  gap: 10px;
+  background: c.$GRAY_LIGHT;
+  border: 1px solid c.$GRAY_LIGHT;
+  cursor: pointer;
+  transition: all 0.25s;
+
+  & span {
+    font-size: 30px;
+  }
+
+  &:hover {
+    background: c.$WHITE;
+    border-color: c.$GRAY;
+  }
+}
+
+.List {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 25px;
+}
+
+@mixin IconWithBG($color) {
+  width: 75px;
+  height: 75px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 5px;
+  background: $color;
+
+  & span {
+    font-size: 64px;
+  }
+}
+
+.Board {
+  @include HEADING_3();
+
+  color: c.$GRAY_DARK;
+  padding: 15px 25px;
+  display: flex;
+  align-items: center;
+  justify-content: start;
+  gap: 15px;
+  cursor: pointer;
+  transition: all 0.25s;
+  background: c.$GRAY_LIGHT;
+  border: 1px solid c.$GRAY_LIGHT;
+  border-radius: 15px;
+
+  &:hover {
+    background: c.$WHITE;
+    border-color: c.$GRAY;
+  }
+
+  & .Red {
+    @include IconWithBG(c.$RED_LIGHT);
+  }
+
+  & .Yellow {
+    @include IconWithBG(c.$YELLOW_LIGHT);
+  }
+
+  & .Green {
+    @include IconWithBG(c.$GREEN_LIGHT);
+  }
+
+  & .Purple {
+    @include IconWithBG(c.$PURPLE_LIGHT);
+  }
+
+  & .Blue {
+    @include IconWithBG(c.$BLUE_LIGHT);
+  }
+}

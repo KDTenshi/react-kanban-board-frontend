@@ -12,6 +12,10 @@
   background: c.$WHITE;
   display: flex;
   flex-direction: column;
+  background-image: url("images/home_bg.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center center;
 }
 
 .Body {
