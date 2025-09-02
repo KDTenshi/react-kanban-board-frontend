@@ -16,7 +16,7 @@
 .Menu {
   background: c.$GRAY_LIGHT;
   border-bottom: 1px solid c.$GRAY;
-  padding: 25px 50px;
+  padding: 10px 25px;
   display: flex;
   flex-direction: column;
   gap: 10px;
@@ -36,8 +36,8 @@
 }
 
 .Icon {
-  width: 35px;
-  height: 35px;
+  width: 30px;
+  height: 30px;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -51,13 +51,13 @@
 }
 
 .Name {
-  @include HEADING_3();
+  @include HEADING_4();
 
   color: c.$GRAY_DARK;
 }
 
 .Button {
-  @include BODY_1();
+  @include BODY_2();
 
   color: c.$GRAY_DARK;
   background: c.$GRAY_LIGHT;
@@ -65,14 +65,14 @@
   align-items: center;
   justify-content: center;
   gap: 10px;
-  padding: 10px 15px;
+  padding: 5px 10px;
   border-radius: 10px;
   border: 1px solid c.$GRAY_LIGHT;
   cursor: pointer;
   transition: all 0.25s;
 
   & span {
-    font-size: 30px;
+    font-size: 25px;
     color: c.$GRAY_DARK;
   }
 
@@ -86,11 +86,11 @@
   display: flex;
   align-items: center;
   justify-content: start;
-  gap: 15px;
+  gap: 10px;
 }
 
 .Controls {
-  padding: 15px 50px;
+  padding: 10px 25px;
   display: flex;
   align-items: center;
   justify-content: space-between;

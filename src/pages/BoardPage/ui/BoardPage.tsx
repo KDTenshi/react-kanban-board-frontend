@@ -12,7 +12,7 @@ const BoardPage: FC = () => {
               <span className={style.Icon}>
                 <span className="material-symbols-outlined">view_kanban</span>
               </span>
-              <h3 className={style.Name}>Board name</h3>
+              <h4 className={style.Name}>Board name</h4>
             </div>
             <button className={style.Button}>
               <span className="material-symbols-outlined">settings</span>
