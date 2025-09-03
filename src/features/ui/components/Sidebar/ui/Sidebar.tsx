@@ -1,23 +1,24 @@
 import type { FC } from "react";
 
 import style from "./Sidebar.module.scss";
+import { Link } from "react-router";
 
 const Sidebar: FC = () => {
   return (
     <div className={style.Sidebar}>
       <nav className={style.Links}>
-        <a href="/" className={style.Link}>
+        <Link to={"/"} className={style.Link}>
           <span className="material-symbols-outlined">home</span>
           Home
-        </a>
-        <a href="/" className={style.Link}>
+        </Link>
+        <Link to={"/boards"} className={style.Link}>
           <span className="material-symbols-outlined">view_kanban</span>
           Boards
-        </a>
-        <a href="/" className={style.Link}>
+        </Link>
+        <Link to={"/settings"} className={style.Link}>
           <span className="material-symbols-outlined">settings</span>
           Settings
-        </a>
+        </Link>
       </nav>
     </div>
   );
