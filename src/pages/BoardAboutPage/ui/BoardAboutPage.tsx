@@ -1,8 +1,8 @@
 import type { FC } from "react";
 
-import style from "./BoardPage.module.scss";
+import style from "./BoardAboutPage.module.scss";
 
-const BoardPage: FC = () => {
+const BoardAboutPage: FC = () => {
   return (
     <div className={style.Page}>
       <div className={style.Heading}>
@@ -47,31 +47,31 @@ const BoardPage: FC = () => {
           </div>
         </div>
       </div>
-      <div className={style.Columns}>
-        <div className={style.Column}>
-          <div className={style.Todo}>
-            <span className={style.Dot}></span>
-            <p className={style.Text}>To Do</p>
+      <div className={style.Content}>
+        <div className={style.Body}>
+          <div className={style.Description}>
+            <h4 className={style.Label}>Description</h4>
+            <p className={style.Text}>
+              Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the
+              industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and
+              scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into
+              electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release
+              of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software
+              like Aldus PageMaker including versions of Lorem Ipsum
+            </p>
           </div>
-          <div className={style.Body}></div>
+          <div className={style.Dates}>
+            <p className={style.Date}>Created at: Friday, 10 March 2025, 12:25</p>
+            <p className={style.Date}>Deadline: Friday, 10 March 2026, 12:25</p>
+          </div>
         </div>
-        <div className={style.Column}>
-          <div className={style.InProgress}>
-            <span className={style.Dot}></span>
-            <p className={style.Text}>In Progress</p>
-          </div>
-          <div className={style.Body}></div>
-        </div>
-        <div className={style.Column}>
-          <div className={style.Done}>
-            <span className={style.Dot}></span>
-            <p className={style.Text}>Done</p>
-          </div>
-          <div className={style.Body}></div>
+        <div className={style.Settings}>
+          <h4 className={style.Label}>Settigns</h4>
+          <h1 className={style.Empty}>Settings will go here</h1>
         </div>
       </div>
     </div>
   );
 };
 
-export default BoardPage;
+export default BoardAboutPage;
