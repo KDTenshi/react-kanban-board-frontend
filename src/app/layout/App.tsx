@@ -8,6 +8,7 @@ import { HomePage } from "../../pages/HomePage";
 import { BoardsPage } from "../../pages/BoardsPage";
 import { BoardPage } from "../../pages/BoardPage";
 import { Route, Routes } from "react-router";
+import { BoardAboutPage } from "../../pages/BoardAboutPage";
 
 const App: FC = () => {
   return (
@@ -20,6 +21,7 @@ const App: FC = () => {
           <Route path="/settings" element={<div>Settings</div>} />
           <Route path="/boards" element={<BoardsPage />} />
           <Route path="/board" element={<BoardPage />} />
+          <Route path="/about" element={<BoardAboutPage />} />
         </Routes>
       </div>
     </div>

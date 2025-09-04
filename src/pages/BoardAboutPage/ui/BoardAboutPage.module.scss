@@ -99,54 +99,68 @@
   gap: 15px;
 }
 
-.Columns {
-  display: flex;
-  align-items: start;
-  justify-content: center;
-  padding: 25px 50px;
-  gap: 25px;
+.Content {
+  display: grid;
+  grid-template-columns: 2fr 1fr;
   height: 100%;
 }
 
-.Column {
+.Body {
+  height: 100%;
   background: c.$GRAY_LIGHT;
-  border: 1px solid c.$GRAY;
-  width: 100%;
-  height: 100%;
-  border-radius: 15px;
-  box-shadow: 0 0 10px c.$GRAY;
-}
-
-@mixin ColumnHeading($color) {
-  display: flex;
-  align-items: center;
-  justify-content: start;
+  border-right: 1px solid c.$GRAY;
   padding: 15px 25px;
-  border-bottom: 1px solid c.$GRAY;
+  display: flex;
+  flex-direction: column;
   gap: 15px;
-
-  & .Dot {
-    width: 20px;
-    height: 20px;
-    border-radius: 100%;
-    background: $color;
-  }
 }
 
-.Todo {
-  @include ColumnHeading(c.$BLUE);
+.Description {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
 }
 
-.InProgress {
-  @include ColumnHeading(c.$YELLOW);
-}
+.Label {
+  @include HEADING_4();
 
-.Done {
-  @include ColumnHeading(c.$GREEN);
+  color: c.$GRAY_DARK;
 }
 
 .Text {
+  @include BODY_2();
+
+  color: c.$GRAY_DARK;
+  padding: 15px 25px;
+  background: c.$GRAY_LIGHT;
+  border: 1px solid c.$GRAY;
+  min-height: 15vh;
+  border-radius: 15px;
+}
+
+.Dates {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.Date {
   @include BODY_1();
 
   color: c.$GRAY_DARK;
+}
+
+.Settings {
+  display: flex;
+  flex-direction: column;
+  gap: 25px;
+  background: c.$GRAY_LIGHT;
+  padding: 15px 25px;
+}
+
+.Empty {
+  @include HEADING_1();
+
+  color: c.$GRAY_DARK;
+  text-align: center;
 }
