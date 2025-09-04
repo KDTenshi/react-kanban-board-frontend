@@ -9,6 +9,7 @@ import { BoardsPage } from "../../pages/BoardsPage";
 import { BoardPage } from "../../pages/BoardPage";
 import { Route, Routes } from "react-router";
 import { BoardAboutPage } from "../../pages/BoardAboutPage";
+import { BoardListPage } from "../../pages/BoardListPage";
 
 const App: FC = () => {
   return (
@@ -22,6 +23,7 @@ const App: FC = () => {
           <Route path="/boards" element={<BoardsPage />} />
           <Route path="/board" element={<BoardPage />} />
           <Route path="/about" element={<BoardAboutPage />} />
+          <Route path="/list" element={<BoardListPage />} />
         </Routes>
       </div>
     </div>
