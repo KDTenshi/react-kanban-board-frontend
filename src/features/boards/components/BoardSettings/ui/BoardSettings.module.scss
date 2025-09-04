@@ -1,0 +1,29 @@
+@use "shared/style/colors" as c;
+@use "shared/style/mixins" as *;
+
+.Settings {
+  background: c.$GRAY_LIGHT;
+  padding: 15px 25px;
+  display: flex;
+  flex-direction: column;
+  gap: 25px;
+}
+
+.Title {
+  @include HEADING_4();
+
+  color: c.$GRAY_DARK;
+}
+
+.Body {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.Empty {
+  @include HEADING_1();
+
+  color: c.$GRAY_DARK;
+  text-align: center;
+}

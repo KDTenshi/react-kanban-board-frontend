@@ -1,0 +1,27 @@
+@use "shared/style/colors" as c;
+@use "shared/style/mixins" as *;
+
+.Board {
+  width: 100%;
+  height: 100%;
+  background: c.$GRAY_LIGHT;
+}
+
+.Heading {
+  display: grid;
+  grid-template-columns: 3fr 1fr 2fr;
+  background: c.$GRAY_LIGHT;
+  border-bottom: 1px solid c.$GRAY;
+}
+
+.Label {
+  @include BODY_1();
+
+  color: c.$GRAY_DARK;
+  padding: 10px 25px;
+  border-right: 1px solid c.$GRAY;
+
+  &:nth-last-child(1) {
+    border-right: none;
+  }
+}

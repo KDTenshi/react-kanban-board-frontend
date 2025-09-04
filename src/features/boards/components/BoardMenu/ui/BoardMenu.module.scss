@@ -1,0 +1,88 @@
+@use "shared/style/colors" as c;
+@use "shared/style/mixins" as *;
+
+.Menu {
+  background: c.$GRAY_LIGHT;
+  border-bottom: 1px solid c.$GRAY;
+  padding: 10px 25px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.Heading {
+  display: flex;
+  align-items: center;
+  justify-content: start;
+  gap: 10px;
+}
+
+.Icon {
+  width: 30px;
+  height: 30px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 5px;
+  background: c.$RED_LIGHT;
+
+  & span {
+    color: c.$GRAY_DARK;
+    font-size: 30px;
+  }
+}
+
+.Title {
+  @include HEADING_4();
+
+  color: c.$GRAY_DARK;
+}
+
+.Navigation {
+  display: flex;
+  align-items: center;
+  justify-content: start;
+  gap: 10px;
+}
+
+.Button {
+  @include BODY_2();
+
+  color: c.$GRAY_DARK;
+  background: c.$GRAY_LIGHT;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  padding: 5px 10px;
+  border-radius: 10px;
+  border: 1px solid c.$GRAY_LIGHT;
+  cursor: pointer;
+  transition: all 0.25s;
+
+  & span {
+    font-size: 25px;
+    color: c.$GRAY_DARK;
+  }
+
+  &:hover {
+    background: c.$WHITE;
+    border-color: c.$GRAY;
+  }
+}
+
+.Controls {
+  background: c.$GRAY_LIGHT;
+  border-bottom: 1px solid c.$GRAY;
+  padding: 10px 25px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.Filters {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 15px;
+}
