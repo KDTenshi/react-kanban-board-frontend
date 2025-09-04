@@ -1,0 +1,36 @@
+@use "shared/style/colors" as c;
+@use "shared/style/mixins" as *;
+
+.Row {
+  background: c.$GRAY_LIGHT;
+  border-bottom: 1px solid c.$GRAY;
+  padding: 15px 25px;
+}
+
+@mixin Title($color) {
+  @include BODY_1();
+
+  color: c.$GRAY_DARK;
+  display: flex;
+  align-items: center;
+  justify-content: start;
+  gap: 10px;
+
+  & span {
+    font-size: 30px;
+    color: $color;
+    transform: rotate(-90deg);
+  }
+}
+
+.Todo {
+  @include Title(c.$BLUE);
+}
+
+.InProgress {
+  @include Title(c.$YELLOW);
+}
+
+.Done {
+  @include Title(c.$GREEN);
+}
