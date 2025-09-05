@@ -1,0 +1,124 @@
+@use "shared/style/colors" as c;
+@use "shared/style/mixins" as *;
+
+@mixin Card {
+  border: 1px solid c.$GRAY_LIGHT;
+  background: c.$GRAY_LIGHT;
+  text-decoration: none;
+  display: flex;
+  justify-content: start;
+  border-radius: 15px;
+  transition: all 0.25s;
+
+  &:hover {
+    background: c.$WHITE;
+    border-color: c.$GRAY;
+  }
+}
+
+@mixin IconWithBG($color) {
+  color: c.$GRAY_DARK;
+  background: $color;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 5px;
+}
+
+@mixin SmallIconWithBG($color) {
+  @include IconWithBG($color);
+
+  width: 35px;
+  height: 35px;
+
+  & span {
+    font-size: 30px;
+  }
+}
+
+@mixin BigIconWithBG($color) {
+  @include IconWithBG($color);
+
+  width: 50px;
+  height: 50px;
+
+  & span {
+    font-size: 50px;
+  }
+}
+
+.Small {
+  @include Card();
+  @include HEADING_4();
+
+  color: c.$GRAY_DARK;
+  padding: 15px 25px;
+  align-items: center;
+  gap: 10px;
+
+  .Red {
+    @include SmallIconWithBG(c.$RED_LIGHT);
+  }
+
+  .Yellow {
+    @include SmallIconWithBG(c.$YELLOW_LIGHT);
+  }
+
+  .Green {
+    @include SmallIconWithBG(c.$GREEN_LIGHT);
+  }
+
+  .Blue {
+    @include SmallIconWithBG(c.$BLUE_LIGHT);
+  }
+
+  .Purple {
+    @include SmallIconWithBG(c.$PURPLE_LIGHT);
+  }
+}
+
+.Big {
+  @include Card();
+
+  padding: 10px 15px;
+  align-items: start;
+  gap: 15px;
+
+  .Red {
+    @include BigIconWithBG(c.$RED_LIGHT);
+  }
+
+  .Yellow {
+    @include BigIconWithBG(c.$YELLOW_LIGHT);
+  }
+
+  .Green {
+    @include BigIconWithBG(c.$GREEN_LIGHT);
+  }
+
+  .Blue {
+    @include BigIconWithBG(c.$BLUE_LIGHT);
+  }
+
+  .Purple {
+    @include BigIconWithBG(c.$PURPLE_LIGHT);
+  }
+}
+
+.Info {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.Name {
+  @include HEADING_4();
+
+  color: c.$GRAY_DARK;
+}
+
+.Date {
+  @include BODY_1();
+
+  color: c.$GRAY_DARK;
+}
