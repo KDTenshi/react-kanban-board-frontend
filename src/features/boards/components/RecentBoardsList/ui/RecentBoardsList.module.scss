@@ -1,0 +1,76 @@
+@use "shared/style/colors" as c;
+@use "shared/style/mixins" as *;
+
+.Wrapper {
+  padding: 20px 25px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  background: c.$GRAY_LIGHT;
+  border: 1px solid c.$GRAY;
+  border-radius: 25px;
+  width: 100%;
+}
+
+.Title {
+  @include HEADING_3();
+
+  color: c.$GRAY_DARK;
+}
+
+.List {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 20px;
+}
+
+@mixin IconWithBG($color) {
+  width: 35px;
+  height: 35px;
+  background: $color;
+  border-radius: 5px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  & span {
+    font-size: 30px;
+  }
+}
+
+.Card {
+  @include HEADING_4();
+
+  color: c.$GRAY_DARK;
+  background: c.$GRAY_LIGHT;
+  padding: 15px 25px;
+  border-radius: 15px;
+  border: 1px solid c.$GRAY_LIGHT;
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+  justify-content: start;
+  gap: 10px;
+  transition: all 0.25s;
+
+  &:hover {
+    background: c.$WHITE;
+    border-color: c.$GRAY;
+  }
+
+  & .Red {
+    @include IconWithBG(c.$RED_LIGHT);
+  }
+
+  & .Yellow {
+    @include IconWithBG(c.$YELLOW_LIGHT);
+  }
+
+  & .Green {
+    @include IconWithBG(c.$GREEN_LIGHT);
+  }
+
+  & .Blue {
+    @include IconWithBG(c.$BLUE_LIGHT);
+  }
+}

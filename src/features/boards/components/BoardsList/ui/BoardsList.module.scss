@@ -1,0 +1,116 @@
+@use "shared/style/colors" as c;
+@use "shared/style/mixins" as *;
+
+.Wrapper {
+  padding: 25px;
+  background: c.$GRAY_LIGHT;
+  border: 1px solid c.$GRAY;
+  box-shadow: 0 0 10px c.$GRAY;
+  border-radius: 25px;
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+}
+
+.Button {
+  @include BODY_1();
+
+  color: c.$GRAY_DARK;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  cursor: pointer;
+  transition: all 0.25s;
+  background: c.$GRAY_LIGHT;
+  border: 1px solid c.$GRAY_LIGHT;
+  padding: 10px 15px;
+  border-radius: 10px;
+  width: max-content;
+
+  &:hover {
+    background: c.$WHITE;
+    border-color: c.$GRAY;
+  }
+
+  & span {
+    font-size: 30px;
+  }
+}
+
+.List {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 25px;
+}
+
+@mixin IconWithBG($color) {
+  width: 50px;
+  height: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: $color;
+  border-radius: 5px;
+  color: c.$GRAY_DARK;
+
+  & span {
+    font-size: 50px;
+  }
+}
+
+.Card {
+  padding: 10px 15px;
+  border-radius: 15px;
+  display: flex;
+  align-items: start;
+  justify-content: start;
+  gap: 15px;
+  text-decoration: none;
+  background: c.$GRAY_LIGHT;
+  border: 1px solid c.$GRAY_LIGHT;
+  transition: all 0.25s;
+
+  &:hover {
+    background: c.$WHITE;
+    border-color: c.$GRAY;
+  }
+
+  & .Red {
+    @include IconWithBG(c.$RED_LIGHT);
+  }
+
+  & .Yellow {
+    @include IconWithBG(c.$YELLOW_LIGHT);
+  }
+
+  & .Green {
+    @include IconWithBG(c.$GREEN_LIGHT);
+  }
+
+  & .Blue {
+    @include IconWithBG(c.$BLUE_LIGHT);
+  }
+
+  & .Purple {
+    @include IconWithBG(c.$PURPLE_LIGHT);
+  }
+}
+
+.Info {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.Name {
+  @include HEADING_4();
+
+  color: c.$GRAY_DARK;
+}
+
+.Date {
+  @include BODY_1();
+
+  color: c.$GRAY_DARK;
+}
