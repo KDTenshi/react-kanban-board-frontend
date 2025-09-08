@@ -11,10 +11,9 @@ const RecentBoardsList: FC = () => {
     <div className={style.Wrapper}>
       <h3 className={style.Title}>Recent boards</h3>
       <nav className={style.List}>
-        <BoardCard size="small" color="red" board={boards[0]} />
-        <BoardCard size="small" color="yellow" board={boards[0]} />
-        <BoardCard size="small" color="green" board={boards[0]} />
-        <BoardCard size="small" color="blue" board={boards[0]} />
+        {boards.map((board) => (
+          <BoardCard size="small" color="red" board={board} key={board.id} />
+        ))}
       </nav>
     </div>
   );
