@@ -22,5 +22,5 @@ export type TTask = {
   description?: string;
   createdAt: number;
   deadline: number;
-  priotity: TTaskPriority;
+  priority: TTaskPriority;
 };
