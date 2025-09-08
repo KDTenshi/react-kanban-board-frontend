@@ -8,21 +8,7 @@ type BoardsState = {
 };
 
 const initialState: BoardsState = {
-  list: [
-    {
-      id: "001",
-      name: "Empty board",
-      description: "",
-      deadline: 1,
-      createdAt: 123,
-      columns: {
-        todo: [],
-        inProgress: [],
-        done: [],
-      },
-      status: "fine",
-    },
-  ],
+  list: [],
 };
 
 export const boardsSlice = createSlice({

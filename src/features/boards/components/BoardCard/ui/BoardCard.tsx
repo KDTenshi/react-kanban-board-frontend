@@ -28,7 +28,7 @@ const cardSizesStyles: { [key in BoardCardSize]: string } = {
 
 const BoardCard: FC<BoardCardProps> = ({ size, color = "red", board }) => {
   return (
-    <Link to={`/board/:${board.id}`} className={cardSizesStyles[size]}>
+    <Link to={`/board/${board.id}`} className={cardSizesStyles[size]}>
       <span className={colorsStyles[color]}>
         <span className="material-symbols-outlined">view_kanban</span>
       </span>
