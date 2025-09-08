@@ -8,8 +8,9 @@ import { HomePage } from "../../pages/HomePage";
 import { BoardsPage } from "../../pages/BoardsPage";
 import { BoardPage } from "../../pages/BoardPage";
 import { Route, Routes } from "react-router";
-import { BoardAboutPage } from "../../pages/BoardAboutPage";
-import { BoardListPage } from "../../pages/BoardListPage";
+import { ColumnsList } from "../../features/boards/components/ColumnsList";
+import { BoardAbout } from "../../features/boards/components/BoardAbout";
+import { BoardList } from "../../features/boards/components/BoardList";
 
 const App: FC = () => {
   return (
@@ -21,9 +22,11 @@ const App: FC = () => {
           <Route path="/" element={<HomePage />} />
           <Route path="/settings" element={<div>Settings</div>} />
           <Route path="/boards" element={<BoardsPage />} />
-          <Route path="/board" element={<BoardPage />} />
-          <Route path="/about" element={<BoardAboutPage />} />
-          <Route path="/list" element={<BoardListPage />} />
+          <Route path="/board/:boardID" element={<BoardPage />}>
+            <Route index element={<ColumnsList />} />
+            <Route path="about" element={<BoardAbout />} />
+            <Route path="list" element={<BoardList />} />
+          </Route>
         </Routes>
       </div>
     </div>

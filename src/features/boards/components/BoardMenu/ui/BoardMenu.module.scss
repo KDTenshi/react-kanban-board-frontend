@@ -45,6 +45,31 @@
   gap: 10px;
 }
 
+.Link {
+  @include BODY_2();
+
+  color: c.$GRAY_DARK;
+  background: c.$GRAY_LIGHT;
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  padding: 5px 10px;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: all 0.25s;
+
+  & span {
+    font-size: 25px;
+    color: c.$GRAY_DARK;
+  }
+
+  &:hover {
+    background: c.$WHITE;
+  }
+}
+
 .Button {
   @include BODY_2();
 

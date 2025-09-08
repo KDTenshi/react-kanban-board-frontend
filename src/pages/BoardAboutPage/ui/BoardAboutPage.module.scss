@@ -1,9 +1,0 @@
-@use "shared/style/colors" as c;
-@use "shared/style/mixins" as *;
-
-.Page {
-  display: flex;
-  flex-direction: column;
-  width: 100%;
-  height: 100%;
-}
