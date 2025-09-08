@@ -14,7 +14,7 @@ const BoardsList: FC = () => {
       </button>
       <div className={style.List}>
         {boards.map((board) => (
-          <BoardCard size="big" color="red" board={board} />
+          <BoardCard size="big" color="red" board={board} key={board.id} />
         ))}
       </div>
     </div>

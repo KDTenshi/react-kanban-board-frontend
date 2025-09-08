@@ -1,6 +1,7 @@
 import type { FC } from "react";
 
 import style from "./BoardMenu.module.scss";
+import { Link } from "react-router";
 
 const BoardMenu: FC = () => {
   return (
@@ -13,15 +14,15 @@ const BoardMenu: FC = () => {
           <h4 className={style.Title}>Board name</h4>
         </div>
         <nav className={style.Navigation}>
-          <button className={style.Button}>
+          <Link to={"about"} className={style.Link}>
             <span className="material-symbols-outlined">summarize</span>About
-          </button>
-          <button className={style.Button}>
+          </Link>
+          <Link to={"list"} className={style.Link}>
             <span className="material-symbols-outlined">list_alt</span>List
-          </button>
-          <button className={style.Button}>
+          </Link>
+          <Link to={"."} className={style.Link}>
             <span className="material-symbols-outlined">view_kanban</span>Board
-          </button>
+          </Link>
         </nav>
       </div>
       <div className={style.Controls}>
