@@ -11,12 +11,10 @@ import { Route, Routes } from "react-router";
 import { ColumnsList } from "../../features/boards/components/ColumnsList";
 import { BoardAbout } from "../../features/boards/components/BoardAbout";
 import { BoardList } from "../../features/boards/components/BoardList";
-import { CreateBoardPopup } from "../../features/boards/components/CreateBoardPopup";
 
 const App: FC = () => {
   return (
     <div className="App">
-      <CreateBoardPopup />
       <Header />
       <div className="Body">
         <Sidebar />
