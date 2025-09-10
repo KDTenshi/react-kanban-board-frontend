@@ -2,6 +2,7 @@ import type { FC } from "react";
 
 import style from "./Column.module.scss";
 import type { TColumnType } from "../../../../../shared/types/types";
+import { TaskCard } from "../../../../tasks/components/TaskCard";
 
 interface ColumnProps {
   type: TColumnType;
@@ -26,7 +27,9 @@ const Column: FC<ColumnProps> = ({ type }) => {
         <span className={style.Dot}></span>
         {columnTitles[type]}
       </p>
-      <div className={style.Body}></div>
+      <div className={style.Body}>
+        <TaskCard />
+      </div>
     </div>
   );
 };

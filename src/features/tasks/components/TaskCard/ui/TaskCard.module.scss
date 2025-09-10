@@ -1,0 +1,58 @@
+@use "shared/style/colors" as c;
+@use "shared/style/mixins" as *;
+
+.Card {
+  padding: 15px 25px;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  background: c.$GRAY_LIGHT;
+  border: 1px solid c.$GRAY;
+  border-radius: 10px;
+}
+
+.Title {
+  @include BODY_1();
+
+  color: c.$GRAY_DARK;
+}
+
+.Info {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.Priority {
+  @include BODY_2();
+
+  color: c.$GRAY_DARK;
+  display: flex;
+  align-items: center;
+  justify-content: start;
+  gap: 10px;
+}
+
+.Low {
+  padding: 5px 10px;
+  border-radius: 5px;
+  background: c.$GREEN_LIGHT;
+}
+
+.Moderate {
+  padding: 5px 10px;
+  border-radius: 5px;
+  background: c.$YELLOW_LIGHT;
+}
+
+.High {
+  padding: 5px 10px;
+  border-radius: 5px;
+  background: c.$RED_LIGHT;
+}
+
+.Deadline {
+  @include BODY_2();
+
+  color: c.$GRAY_DARK;
+}
